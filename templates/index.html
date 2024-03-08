@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Hafta kunlari</h1>
+    <table border="1">
+        <tr>                        
+            {%for language in languages%}
+            <th>{{language}}</th>
+            {%endfor%}
+        </tr>
+        {% for i in all_days.values%}
+
+        <tr>
+            {% for name in i%}
+            <td>{{name}}</td>
+            {%endfor%}
+
+        </tr>
+        {%endfor%}
+
+    </table>
+</body>
+</html>
+<!-- style.css -->
